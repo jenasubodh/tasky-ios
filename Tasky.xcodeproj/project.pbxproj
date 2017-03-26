@@ -116,23 +116,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C2051CC51E7FE46E00B2E706 /* ViewControllers */ = {
+		C2051CC51E7FE46E00B2E706 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */,
-				C25111971E851450004DD696 /* TaskViewController.swift */,
+				C28F29C61E88493A00F0CF68 /* Tasks */,
+				C28F29C51E88493400F0CF68 /* Task */,
 			);
-			name = ViewControllers;
+			name = Classes;
 			sourceTree = "<group>";
 		};
-		C2051CC61E7FE47900B2E706 /* UI */ = {
+		C2051CC61E7FE47900B2E706 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				C22B40D01E7BABC1009DE62B /* Main.storyboard */,
 				C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */,
 				C25111951E850938004DD696 /* Task.storyboard */,
 			);
-			name = UI;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		C22B40C01E7BABC1009DE62B = {
@@ -160,8 +160,8 @@
 		C22B40CB1E7BABC1009DE62B /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
-				C2051CC61E7FE47900B2E706 /* UI */,
-				C2051CC51E7FE46E00B2E706 /* ViewControllers */,
+				C2051CC61E7FE47900B2E706 /* Storyboards */,
+				C2051CC51E7FE46E00B2E706 /* Classes */,
 				C22B40CC1E7BABC1009DE62B /* AppDelegate.swift */,
 				C22B40D31E7BABC1009DE62B /* Assets.xcassets */,
 				C22B40D81E7BABC1009DE62B /* Info.plist */,
@@ -185,6 +185,22 @@
 				C22B40EE1E7BABC1009DE62B /* Info.plist */,
 			);
 			path = TaskyUITests;
+			sourceTree = "<group>";
+		};
+		C28F29C51E88493400F0CF68 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				C25111971E851450004DD696 /* TaskViewController.swift */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		C28F29C61E88493A00F0CF68 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
