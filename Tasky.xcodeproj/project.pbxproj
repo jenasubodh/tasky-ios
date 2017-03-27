@@ -18,6 +18,7 @@
 		C22B40ED1E7BABC1009DE62B /* TaskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40EC1E7BABC1009DE62B /* TaskyUITests.swift */; };
 		C25111961E850938004DD696 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25111951E850938004DD696 /* Task.storyboard */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
+		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
 		DF4DD9BAB394DE2657F97980 /* Pods_Tasky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF0AC797213DF33237D1EA /* Pods_Tasky.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		C22B40EE1E7BABC1009DE62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25111951E850938004DD696 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		E332BF999988480048812146 /* Pods-TaskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskyUITests/Pods-TaskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				C22B40D01E7BABC1009DE62B /* Main.storyboard */,
 				C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */,
 				C25111951E850938004DD696 /* Task.storyboard */,
+				C296C6B01E885286008C84EE /* Authentication.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				C25111961E850938004DD696 /* Task.storyboard in Resources */,
 				C22B40D41E7BABC1009DE62B /* Assets.xcassets in Resources */,
 				C22B40D21E7BABC1009DE62B /* Main.storyboard in Resources */,
+				C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
