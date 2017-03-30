@@ -1,3 +1,8 @@
 language: objective-c
 os: osx
 osx_image: xcode8.2
+
+before_install:
+- gem install cocoapods-acknowledgements
+- gem install cocoapods
+- pod update
