@@ -1,4 +1,6 @@
 language: objective-c
+xcode_project: Tasky.xcodeproj
+xcode_scheme: TaskyTests
 os: osx
 osx_image: xcode8.2
 
