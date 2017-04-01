@@ -8,9 +8,13 @@
 
 import UIKit
 
-class TasksViewController: UIViewController {
+class TasksViewController: UIViewController, TasksViewInterface{
 
-    // MARK: - IBAction
+    // MARK: - Private Declarations
+    
+    private var tasks : [Task] = []
+    
+    // MARK: - IBOutlets
     
     @IBOutlet var barButtonAdd: UIBarButtonItem!
     @IBOutlet var barButtonDone: UIBarButtonItem!
@@ -32,8 +36,8 @@ class TasksViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,6 +51,16 @@ class TasksViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    // MARK: - TasksViewInterface
+    
+    func showTasksData(tasks: [Task]) {
+        self.tasks = tasks
+        self.tableView.reloadData()
+    }
+    
+    func showNoContentScreen() {
+        // Show Epmty Content Screen
+    }
     
     // MARK: - IBAction
     
