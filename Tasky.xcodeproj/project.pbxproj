@@ -225,12 +225,12 @@
 		C22B40CB1E7BABC1009DE62B /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
-				C212ADBE1E90E38800DDC0E7 /* Network */,
 				C212ADBA1E90D96100DDC0E7 /* Application */,
-				C212ADB51E90D8F800DDC0E7 /* Models */,
+				C212ADBB1E90D97200DDC0E7 /* Resources */,
 				C2051CC61E7FE47900B2E706 /* Storyboards */,
 				C2051CC51E7FE46E00B2E706 /* Modules */,
-				C212ADBB1E90D97200DDC0E7 /* Resources */,
+				C212ADB51E90D8F800DDC0E7 /* Models */,
+				C212ADBE1E90E38800DDC0E7 /* Network */,
 			);
 			path = Tasky;
 			sourceTree = "<group>";
@@ -732,7 +732,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tasky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.subodhjena.Tasky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subodhjena.tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -746,7 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tasky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.subodhjena.Tasky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subodhjena.tasky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -30,6 +30,8 @@ class TasksViewController: UIViewController {
 
         self.navigationItem.leftBarButtonItem = barButtonEdit
         self.navigationItem.rightBarButtonItem = barButtonAdd
+        
+        startLogin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +48,15 @@ class TasksViewController: UIViewController {
         }
     }
 
+    // MARK: - Private Functions
+    
+    private func startLogin() {
+        
+        let loginViewController: UIViewController = UIStoryboard(resource: R.storyboard.authentication).instantiateViewController(withIdentifier: "Authentication")
+        
+        self.present(loginViewController, animated: true, completion: nil)
+    }
+    
     // MARK: - IBAction
     
     @IBAction func didTapAdd(_ sender: Any) {

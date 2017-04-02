@@ -10,6 +10,10 @@ import UIKit
 
 class RegisrationViewController: UIViewController {
 
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtConfirmPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,16 +24,14 @@ class RegisrationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
+    @IBAction func didTapRegister(_ sender: Any) {
+        
+    }
 }

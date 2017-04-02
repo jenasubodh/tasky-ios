@@ -56,7 +56,7 @@
                         <action selector="didTapEdit:" destination="BYZ-38-t0r" id="DEa-3p-IAB"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem image="save" id="1kn-tc-jUQ">
+                <barButtonItem image="done" id="1kn-tc-jUQ">
                     <connections>
                         <action selector="didTapDone:" destination="BYZ-38-t0r" id="bik-K6-NVZ"/>
                     </connections>
@@ -66,7 +66,7 @@
                         <action selector="didTapDelete:" destination="BYZ-38-t0r" id="Y3e-eG-liY"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem image="exit" id="aak-pq-8sn">
+                <barButtonItem image="cancel" id="aak-pq-8sn">
                     <connections>
                         <action selector="didTapCancel:" destination="BYZ-38-t0r" id="bzM-6V-oG7"/>
                     </connections>
@@ -106,7 +106,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Task" id="K8F-Hj-vAi">
-                        <barButtonItem key="rightBarButtonItem" image="save" id="Ptd-0r-ehR"/>
+                        <barButtonItem key="rightBarButtonItem" image="done" id="Ptd-0r-ehR"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U63-hO-4SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,9 +116,9 @@
     </scenes>
     <resources>
         <image name="add" width="24" height="24"/>
+        <image name="cancel" width="24" height="24"/>
         <image name="delete" width="24" height="24"/>
+        <image name="done" width="24" height="24"/>
         <image name="edit" width="24" height="24"/>
-        <image name="exit" width="24" height="24"/>
-        <image name="save" width="24" height="24"/>
     </resources>
 </document>

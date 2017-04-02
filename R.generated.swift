@@ -31,29 +31,27 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
     /// Image `add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "add")
-    /// Image `close`.
-    static let close = Rswift.ImageResource(bundle: R.hostingBundle, name: "close")
+    /// Image `cancel`.
+    static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `delete`.
     static let delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "delete")
+    /// Image `done`.
+    static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "done")
     /// Image `edit`.
     static let edit = Rswift.ImageResource(bundle: R.hostingBundle, name: "edit")
-    /// Image `exit`.
-    static let exit = Rswift.ImageResource(bundle: R.hostingBundle, name: "exit")
-    /// Image `save`.
-    static let save = Rswift.ImageResource(bundle: R.hostingBundle, name: "save")
     
     /// `UIImage(named: "add", bundle: ..., traitCollection: ...)`
     static func add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.add, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "close", bundle: ..., traitCollection: ...)`
-    static func close(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.close, compatibleWith: traitCollection)
+    /// `UIImage(named: "cancel", bundle: ..., traitCollection: ...)`
+    static func cancel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cancel, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "delete", bundle: ..., traitCollection: ...)`
@@ -61,19 +59,14 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.delete, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "done", bundle: ..., traitCollection: ...)`
+    static func done(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.done, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "edit", bundle: ..., traitCollection: ...)`
     static func edit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.edit, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "exit", bundle: ..., traitCollection: ...)`
-    static func exit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.exit, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "save", bundle: ..., traitCollection: ...)`
-    static func save(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.save, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -201,11 +194,11 @@ struct _R: Rswift.Validatable {
       let name = "Main"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "save") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'save' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "cancel") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "edit") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'edit' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "exit") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'exit' is used in storyboard 'Main', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
