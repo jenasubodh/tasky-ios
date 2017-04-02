@@ -22,6 +22,8 @@
 		C25111961E850938004DD696 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25111951E850938004DD696 /* Task.storyboard */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
+		C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E741E91279D0057E087 /* LoginViewController.swift */; };
+		C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */; };
 		DF4DD9BAB394DE2657F97980 /* Pods_Tasky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF0AC797213DF33237D1EA /* Pods_Tasky.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		C25111951E850938004DD696 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		C2F19E741E91279D0057E087 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisrationViewController.swift; sourceTree = "<group>"; };
 		E332BF999988480048812146 /* Pods-TaskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskyUITests/Pods-TaskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +179,7 @@
 		C212ADBC1E90E07400DDC0E7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C2F19E741E91279D0057E087 /* LoginViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 		C212ADBD1E90E07A00DDC0E7 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -549,6 +555,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */,
+				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,

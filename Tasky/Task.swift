@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 
-public class Task {
+struct Task {
 	
     public var id : String?
 	public var user : User?
@@ -16,38 +17,20 @@ public class Task {
 	public var description : String?
 	public var createdAt : String?
 	public var updatedAt : String?
+}
 
-    public class func modelsFromDictionaryArray(array:NSArray) -> [Task]{
-        var models:[Task] = []
-        for item in array
-        {
-            models.append(Task(dictionary: item as! NSDictionary)!)
-        }
-        return models
+extension Task: Mappable {
+    
+    init?(map: Map) {
+        
     }
-
-	required public init?(dictionary: NSDictionary) {
-
-		id = dictionary["id"] as? String
-		if (dictionary["user"] != nil) { user = User(dictionary: dictionary["user"] as! NSDictionary) }
-		title = dictionary["title"] as? String
-		description = dictionary["description"] as? String
-		createdAt = dictionary["createdAt"] as? String
-		updatedAt = dictionary["updatedAt"] as? String
-	}
-
-	public func dictionaryRepresentation() -> NSDictionary {
-
-		let dictionary = NSMutableDictionary()
-
-		dictionary.setValue(self.id, forKey: "id")
-		dictionary.setValue(self.user?.dictionaryRepresentation(), forKey: "user")
-		dictionary.setValue(self.title, forKey: "title")
-		dictionary.setValue(self.description, forKey: "description")
-		dictionary.setValue(self.createdAt, forKey: "createdAt")
-		dictionary.setValue(self.updatedAt, forKey: "updatedAt")
-
-		return dictionary
-	}
-
+    
+    mutating func mapping(map: Map) {
+        title       <- map["id"]
+        user     <- map["user"]
+        title     <- map["title"]
+        description     <- map["description"]
+        createdAt    <- map["createdAt"]
+        updatedAt        <- map["datupdatedAt"]
+    }
 }

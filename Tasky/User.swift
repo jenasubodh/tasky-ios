@@ -7,39 +7,24 @@
 //
 
 import Foundation
+import ObjectMapper
 
-
-public class User {
+struct User {
 
     public var id : String?
 	public var name : String?
 	public var picture : String?
+}
 
-    public class func modelsFromDictionaryArray(array:NSArray) -> [User] {
-        var models:[User] = []
-        for item in array
-        {
-            models.append(User(dictionary: item as! NSDictionary)!)
-        }
-        return models
+extension User: Mappable {
+    
+    init?(map: Map) {
+        
     }
-
-	required public init?(dictionary: NSDictionary) {
-
-		id = dictionary["id"] as? String
-		name = dictionary["name"] as? String
-		picture = dictionary["picture"] as? String
-	}
-
-	public func dictionaryRepresentation() -> NSDictionary {
-
-		let dictionary = NSMutableDictionary()
-
-		dictionary.setValue(self.id, forKey: "id")
-		dictionary.setValue(self.name, forKey: "name")
-		dictionary.setValue(self.picture, forKey: "picture")
-
-		return dictionary
-	}
-
+    
+    mutating func mapping(map: Map) {
+        id       <- map["id"]
+        name     <- map["user"]
+        picture     <- map["title"]
+    }
 }

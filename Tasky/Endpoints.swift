@@ -8,9 +8,8 @@
 
 import Foundation
 
-
 struct API {
-    static let baseUrl = "https://www.ckl.io"
+    static let baseUrl = "https://tasky-api.herokuapp.com/"
 }
 
 protocol Endpoint {
@@ -21,18 +20,19 @@ protocol Endpoint {
 
 enum Endpoints {
     
-    enum Articles: Endpoint {
-        case fetch
+    enum Tasks: Endpoint {
+        
+        case all
         
         public var path: String {
             switch self {
-            case .fetch: return "/challenge/"
+                case .all: return "/tasks/"
             }
         }
         
         public var url: String {
             switch self {
-            case .fetch: return "\(API.baseUrl)\(path)"
+                case .all: return "\(API.baseUrl)\(path)"
             }
         }
     }
