@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tasky-->
+        <!--Tasks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TasksViewController" customModule="Tasky" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ofH-GQ-xLW" secondAttribute="bottom" id="bNX-6V-CsV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tasky" id="Rz6-OH-vfo"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="Rz6-OH-vfo"/>
                     <connections>
                         <outlet property="barButtonAdd" destination="rXg-7D-bmh" id="Yhz-1q-JZW"/>
                         <outlet property="barButtonCancel" destination="aak-pq-8sn" id="DMv-Yg-Noi"/>
@@ -42,6 +42,7 @@
                         <outlet property="barButtonDone" destination="1kn-tc-jUQ" id="PYn-6Y-4tk"/>
                         <outlet property="barButtonEdit" destination="AjY-MR-FTA" id="j4S-is-HmI"/>
                         <outlet property="tableView" destination="ofH-GQ-xLW" id="urB-Xq-rsJ"/>
+                        <segue destination="wSh-bk-k43" kind="show" identifier="TaskEditor" id="FEo-Y0-ULd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,6 +91,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmp-ll-icT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62" y="593"/>
+        </scene>
+        <!--Edit Task-->
+        <scene sceneID="Gmc-58-fGe">
+            <objects>
+                <viewController id="wSh-bk-k43" customClass="TaskViewController" customModule="Tasky" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="22K-d7-6Et"/>
+                        <viewControllerLayoutGuide type="bottom" id="YNq-Og-dtN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vNO-dh-TeS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Task" id="K8F-Hj-vAi">
+                        <barButtonItem key="rightBarButtonItem" image="save" id="Ptd-0r-ehR"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U63-hO-4SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="592"/>
         </scene>
     </scenes>
     <resources>

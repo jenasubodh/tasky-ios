@@ -19,9 +19,9 @@
 		C22B40D71E7BABC1009DE62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */; };
 		C22B40E21E7BABC1009DE62B /* TaskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40E11E7BABC1009DE62B /* TaskyTests.swift */; };
 		C22B40ED1E7BABC1009DE62B /* TaskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40EC1E7BABC1009DE62B /* TaskyUITests.swift */; };
-		C25111961E850938004DD696 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25111951E850938004DD696 /* Task.storyboard */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
+		C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D029B31E915C0600A89F10 /* R.generated.swift */; };
 		C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E741E91279D0057E087 /* LoginViewController.swift */; };
 		C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */; };
 		DF4DD9BAB394DE2657F97980 /* Pods_Tasky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF0AC797213DF33237D1EA /* Pods_Tasky.framework */; };
@@ -69,9 +69,9 @@
 		C22B40E81E7BABC1009DE62B /* TaskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22B40EC1E7BABC1009DE62B /* TaskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITests.swift; sourceTree = "<group>"; };
 		C22B40EE1E7BABC1009DE62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C25111951E850938004DD696 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		C2D029B31E915C0600A89F10 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2F19E741E91279D0057E087 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisrationViewController.swift; sourceTree = "<group>"; };
 		E332BF999988480048812146 /* Pods-TaskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskyUITests/Pods-TaskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 			children = (
 				C22B40D01E7BABC1009DE62B /* Main.storyboard */,
 				C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */,
-				C25111951E850938004DD696 /* Task.storyboard */,
 				C296C6B01E885286008C84EE /* Authentication.storyboard */,
 			);
 			name = Storyboards;
@@ -170,6 +169,7 @@
 		C212ADBB1E90D97200DDC0E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2D029B31E915C0600A89F10 /* R.generated.swift */,
 				C22B40D31E7BABC1009DE62B /* Assets.xcassets */,
 				C22B40D81E7BABC1009DE62B /* Info.plist */,
 			);
@@ -282,6 +282,7 @@
 				C22B40C71E7BABC1009DE62B /* Resources */,
 				FF2A6D304621D9A13EEB5719 /* [CP] Embed Pods Frameworks */,
 				65D5B62FDF16FBCC5EADF18D /* [CP] Copy Pods Resources */,
+				C2D029B21E915B5200A89F10 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -389,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22B40D71E7BABC1009DE62B /* LaunchScreen.storyboard in Resources */,
-				C25111961E850938004DD696 /* Task.storyboard in Resources */,
 				C22B40D41E7BABC1009DE62B /* Assets.xcassets in Resources */,
 				C22B40D21E7BABC1009DE62B /* Main.storyboard in Resources */,
 				C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */,
@@ -488,6 +488,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaskyTests/Pods-TaskyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C2D029B21E915B5200A89F10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
 		ED6D7C419692B9166039F3E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +570,7 @@
 			files = (
 				C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */,
 				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
+				C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */,
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,

@@ -37,24 +37,20 @@ class TasksViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
+        if(segue.identifier == "TaskEditor") {
+            
+        }
     }
-    
-    // MARK: - Private Methods
-    
-    fileprivate func openTaskEditor() {
-        let viewController:UIViewController = UIStoryboard(name: "Task", bundle: nil).instantiateViewController(withIdentifier: "Task")
-        self.present(viewController, animated: true, completion: nil)
-    }
-    
+
     // MARK: - IBAction
     
     @IBAction func didTapAdd(_ sender: Any) {
-        self.openTaskEditor()
+        
+        self.performSegue(withIdentifier: "TaskEditor", sender: self)
     }
     
     @IBAction func didTapEdit(_ sender: Any) {
