@@ -50,7 +50,7 @@ class TaskViewController: UIViewController {
     fileprivate func setRightNavigationBarButton() {
         
         let btnSave = UIButton(type: .custom)
-        btnSave.setImage(UIImage(named: "check"), for: .normal)
+        btnSave.setImage(UIImage(named: "save"), for: .normal)
         btnSave.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btnSave.addTarget(self, action: #selector(TaskViewController.didTapRightNavigationBarButton), for: .touchUpInside)
         let button = UIBarButtonItem(customView: btnSave)

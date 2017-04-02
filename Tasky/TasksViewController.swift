@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksViewController: UIViewController, TasksViewInterface{
+class TasksViewController: UIViewController {
 
     // MARK: - Private Declarations
     
@@ -49,17 +49,6 @@ class TasksViewController: UIViewController, TasksViewInterface{
     fileprivate func openTaskEditor() {
         let viewController:UIViewController = UIStoryboard(name: "Task", bundle: nil).instantiateViewController(withIdentifier: "Task")
         self.present(viewController, animated: true, completion: nil)
-    }
-    
-    // MARK: - TasksViewInterface
-    
-    func showTasksData(tasks: [Task]) {
-        self.tasks = tasks
-        self.tableView.reloadData()
-    }
-    
-    func showNoContentScreen() {
-        // Show Epmty Content Screen
     }
     
     // MARK: - IBAction

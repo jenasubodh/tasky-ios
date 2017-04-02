@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l2T-fI-qMT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l2T-fI-qMT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,27 +45,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <barButtonItem systemItem="add" id="rXg-7D-bmh">
+                <barButtonItem image="add" id="rXg-7D-bmh">
                     <connections>
                         <action selector="didTapAdd:" destination="BYZ-38-t0r" id="CEb-Ml-LAt"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="edit" id="AjY-MR-FTA">
+                <barButtonItem image="edit" id="AjY-MR-FTA">
                     <connections>
                         <action selector="didTapEdit:" destination="BYZ-38-t0r" id="DEa-3p-IAB"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="done" id="1kn-tc-jUQ">
+                <barButtonItem image="save" id="1kn-tc-jUQ">
                     <connections>
                         <action selector="didTapDone:" destination="BYZ-38-t0r" id="bik-K6-NVZ"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="trash" id="WyT-Xa-CSZ">
+                <barButtonItem image="delete" id="WyT-Xa-CSZ">
                     <connections>
                         <action selector="didTapDelete:" destination="BYZ-38-t0r" id="Y3e-eG-liY"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="cancel" id="aak-pq-8sn">
+                <barButtonItem image="exit" id="aak-pq-8sn">
                     <connections>
                         <action selector="didTapCancel:" destination="BYZ-38-t0r" id="bzM-6V-oG7"/>
                     </connections>
@@ -92,4 +92,11 @@
             <point key="canvasLocation" x="-62" y="593"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="24" height="24"/>
+        <image name="delete" width="24" height="24"/>
+        <image name="edit" width="24" height="24"/>
+        <image name="exit" width="24" height="24"/>
+        <image name="save" width="24" height="24"/>
+    </resources>
 </document>

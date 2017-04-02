@@ -6,8 +6,12 @@ target 'Tasky' do
   use_frameworks!
 
   # Pods for Tasky
-  pod 'Alamofire', '~> 4.4'
-
+  
+  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'Kingfisher', '~> 3.0'
+  pod 'R.swift'
+  pod 'RxSwift', '3.0'
+  
   target 'TaskyTests' do
     inherit! :search_paths
     # Pods for testing
