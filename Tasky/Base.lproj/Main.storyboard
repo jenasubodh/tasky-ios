@@ -47,26 +47,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <barButtonItem image="add" id="rXg-7D-bmh">
+                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapAdd:" destination="BYZ-38-t0r" id="CEb-Ml-LAt"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem image="edit" id="AjY-MR-FTA">
+                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapEdit:" destination="BYZ-38-t0r" id="DEa-3p-IAB"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem image="done" id="1kn-tc-jUQ">
+                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapDone:" destination="BYZ-38-t0r" id="bik-K6-NVZ"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem image="delete" id="WyT-Xa-CSZ">
+                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapDelete:" destination="BYZ-38-t0r" id="Y3e-eG-liY"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem image="cancel" id="aak-pq-8sn">
+                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapCancel:" destination="BYZ-38-t0r" id="bzM-6V-oG7"/>
                     </connections>
@@ -79,9 +84,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2T-fI-qMT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLl-D6-Ls6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eLl-D6-Ls6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.28675818419999999" green="0.64491772950000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

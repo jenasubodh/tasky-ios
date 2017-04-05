@@ -31,7 +31,7 @@ class TasksViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barButtonEdit
         self.navigationItem.rightBarButtonItem = barButtonAdd
         
-        startLogin()
+        // startLogin()
     }
 
     override func didReceiveMemoryWarning() {
