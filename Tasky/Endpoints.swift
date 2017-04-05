@@ -18,7 +18,6 @@ enum Endpoints {
         case UpdateTask(taskId: String)
         case DeleteTask(taskId: String)
         
-        
         var method: HTTPMethod {
             switch self {
             case .GetTasks:
@@ -35,13 +34,13 @@ enum Endpoints {
         public var path: String {
             switch self {
             case .GetTasks:
-                return "/tasks"
+                return "tasks"
             case .GetTask(let taskId):
-                return "/tasks/\(taskId)"
+                return "tasks/\(taskId)"
             case .UpdateTask(let taskId):
-                return "/tasks/\(taskId)"
+                return "tasks/\(taskId)"
             case .DeleteTask(let taskId):
-                return "/tasks/\(taskId)"
+                return "tasks/\(taskId)"
             }
         }
         

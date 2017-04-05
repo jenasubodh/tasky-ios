@@ -15,6 +15,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Endpoints.Tasks.GetTasks().url)
+        print(Endpoints.Tasks.GetTask(taskId: "10").url)
+        print(Endpoints.Tasks.UpdateTask(taskId: "20").url)
+        print(Endpoints.Tasks.DeleteTask(taskId: "30").url)
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,5 +9,5 @@
 import Foundation
 
 struct API {
-    static let baseUrl = "https://www.ckl.io"
+    static let baseUrl = "https://tasky-api.herokuapp.com/"
 }
