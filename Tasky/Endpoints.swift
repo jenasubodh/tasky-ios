@@ -15,6 +15,7 @@ enum Endpoints {
         
         case GetTasks()
         case GetTask(taskId: String)
+        case CreateTask()
         case UpdateTask(taskId: String)
         case DeleteTask(taskId: String)
         
@@ -24,6 +25,8 @@ enum Endpoints {
                 return .get
             case .GetTask:
                 return .get
+            case .CreateTask:
+                return .post
             case .UpdateTask:
                 return .put
             case .DeleteTask:
@@ -37,6 +40,8 @@ enum Endpoints {
                 return "tasks"
             case .GetTask(let taskId):
                 return "tasks/\(taskId)"
+            case .CreateTask:
+                return "tasks"
             case .UpdateTask(let taskId):
                 return "tasks/\(taskId)"
             case .DeleteTask(let taskId):
@@ -52,6 +57,8 @@ enum Endpoints {
             case .GetTasks:
                 return "\(baseUrl)\(path)"
             case .GetTask:
+                return "\(baseUrl)\(path)"
+            case .CreateTask:
                 return "\(baseUrl)\(path)"
             case .UpdateTask:
                 return "\(baseUrl)\(path)"
