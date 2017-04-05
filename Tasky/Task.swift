@@ -26,11 +26,11 @@ extension Task: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        title       <- map["id"]
+        id       <- map["id"]
         user     <- map["user"]
         title     <- map["title"]
         description     <- map["description"]
         createdAt    <- map["createdAt"]
-        updatedAt        <- map["datupdatedAt"]
+        updatedAt        <- map["updatedAt"]
     }
 }

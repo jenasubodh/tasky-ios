@@ -13,7 +13,10 @@ struct User {
 
     public var id : String?
 	public var name : String?
-	public var picture : String?
+	public var email : String?
+    public var picture : String?
+    public var createdAt : String?
+    public var updatedAt : String?
 }
 
 extension User: Mappable {
@@ -24,7 +27,10 @@ extension User: Mappable {
     
     mutating func mapping(map: Map) {
         id       <- map["id"]
-        name     <- map["user"]
-        picture     <- map["title"]
+        name     <- map["name"]
+        email     <- map["email"]
+        picture     <- map["picture"]
+        createdAt     <- map["createdAt"]
+        updatedAt     <- map["updatedAt"]
     }
 }

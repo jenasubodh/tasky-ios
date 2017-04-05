@@ -2,38 +2,64 @@
 //  Endpoints.swift
 //  Tasky
 //
-//  Created by Subodh Jena on 02/04/17.
+//  Created by Subodh Jena on 04/04/17.
 //  Copyright © 2017 Subodh Jena. All rights reserved.
 //
 
 import Foundation
-
-struct API {
-    static let baseUrl = "https://tasky-api.herokuapp.com/"
-}
-
-protocol Endpoint {
-   
-    var path: String { get }
-    var url: String { get }
-}
+import Alamofire
 
 enum Endpoints {
     
     enum Tasks: Endpoint {
         
-        case all
+        case GetTasks()
+        case GetTask(taskId: String)
+        case UpdateTask(taskId: String)
+        case DeleteTask(taskId: String)
+        
+        
+        var method: HTTPMethod {
+            switch self {
+            case .GetTasks:
+                return .get
+            case .GetTask:
+                return .get
+            case .UpdateTask:
+                return .put
+            case .DeleteTask:
+                return .delete
+            }
+        }
         
         public var path: String {
             switch self {
-                case .all: return "/tasks/"
+            case .GetTasks:
+                return "/tasks"
+            case .GetTask(let taskId):
+                return "/tasks/\(taskId)"
+            case .UpdateTask(let taskId):
+                return "/tasks/\(taskId)"
+            case .DeleteTask(let taskId):
+                return "/tasks/\(taskId)"
             }
         }
         
-        public var url: String {
+        var url: String {
+            
+            let baseUrl = API.baseUrl
+            
             switch self {
-                case .all: return "\(API.baseUrl)\(path)"
+            case .GetTasks:
+                return "\(baseUrl)\(path)"
+            case .GetTask:
+                return "\(baseUrl)\(path)"
+            case .UpdateTask:
+                return "\(baseUrl)\(path)"
+            case .DeleteTask:
+                return "\(baseUrl)\(path)"
             }
         }
+        
     }
 }
