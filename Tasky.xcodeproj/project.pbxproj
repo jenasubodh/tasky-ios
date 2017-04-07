@@ -21,6 +21,10 @@
 		C23DC0F61E93FF6800C94F22 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F51E93FF6800C94F22 /* API.swift */; };
 		C23DC0F81E93FF8000C94F22 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F71E93FF8000C94F22 /* Endpoint.swift */; };
 		C23DC0FA1E93FFA200C94F22 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F91E93FFA200C94F22 /* Endpoints.swift */; };
+		C23E20B11E9794C300575894 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E20B01E9794C300575894 /* Auth.swift */; };
+		C23E20B31E97962B00575894 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E20B21E97962B00575894 /* APIResult.swift */; };
+		C23E20B71E9799BF00575894 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E20B61E9799BF00575894 /* Globals.swift */; };
+		C240FE771E95538F00B8CC17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240FE761E95538F00B8CC17 /* APIManager.swift */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
 		C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D029B31E915C0600A89F10 /* R.generated.swift */; };
@@ -73,6 +77,10 @@
 		C23DC0F51E93FF6800C94F22 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C23DC0F71E93FF8000C94F22 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C23DC0F91E93FFA200C94F22 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		C23E20B01E9794C300575894 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		C23E20B21E97962B00575894 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		C23E20B61E9799BF00575894 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		C240FE761E95538F00B8CC17 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C2D029B31E915C0600A89F10 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -158,6 +166,7 @@
 			children = (
 				C212ADB61E90D95300DDC0E7 /* Task.swift */,
 				C212ADB71E90D95300DDC0E7 /* User.swift */,
+				C23E20B01E9794C300575894 /* Auth.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,9 +208,11 @@
 		C212ADBE1E90E38800DDC0E7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C23E20AB1E97781000575894 /* Protocols */,
 				C23DC0F51E93FF6800C94F22 /* API.swift */,
-				C23DC0F71E93FF8000C94F22 /* Endpoint.swift */,
+				C23E20B21E97962B00575894 /* APIResult.swift */,
 				C23DC0F91E93FFA200C94F22 /* Endpoints.swift */,
+				C240FE761E95538F00B8CC17 /* APIManager.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 		C22B40CB1E7BABC1009DE62B /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
+				C23E20B51E9799B200575894 /* Utilities */,
 				C212ADBA1E90D96100DDC0E7 /* Application */,
 				C212ADBB1E90D97200DDC0E7 /* Resources */,
 				C2051CC61E7FE47900B2E706 /* Storyboards */,
@@ -257,6 +269,22 @@
 				C22B40EE1E7BABC1009DE62B /* Info.plist */,
 			);
 			path = TaskyUITests;
+			sourceTree = "<group>";
+		};
+		C23E20AB1E97781000575894 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C23DC0F71E93FF8000C94F22 /* Endpoint.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C23E20B51E9799B200575894 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C23E20B61E9799BF00575894 /* Globals.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C28F29C51E88493400F0CF68 /* Task */ = {
@@ -574,15 +602,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23E20B11E9794C300575894 /* Auth.swift in Sources */,
 				C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */,
 				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
 				C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */,
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
+				C23E20B31E97962B00575894 /* APIResult.swift in Sources */,
 				C23DC0F81E93FF8000C94F22 /* Endpoint.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
+				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,
 				C212ADB91E90D95300DDC0E7 /* User.swift in Sources */,
 				C23DC0F61E93FF6800C94F22 /* API.swift in Sources */,
+				C240FE771E95538F00B8CC17 /* APIManager.swift in Sources */,
 				C25111981E851450004DD696 /* TaskViewController.swift in Sources */,
 				C23DC0FA1E93FFA200C94F22 /* Endpoints.swift in Sources */,
 			);

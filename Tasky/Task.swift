@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
+import SwiftyJSON
 
 struct Task {
 	
@@ -19,18 +19,28 @@ struct Task {
 	public var updatedAt : String?
 }
 
-extension Task: Mappable {
+extension Task {
     
-    init?(map: Map) {
-        
+    init(json: JSON) {
+        id = json["id"].stringValue
+        user = User(json: json["user"])
+        title = json["title"].stringValue
+        description = json["description"].string
+        createdAt = json["createdAt"].string
+        updatedAt = json["updatedAt"].string
     }
     
-    mutating func mapping(map: Map) {
-        id       <- map["id"]
-        user     <- map["user"]
-        title     <- map["title"]
-        description     <- map["description"]
-        createdAt    <- map["createdAt"]
-        updatedAt        <- map["updatedAt"]
+    func toParameters() -> [String : AnyObject] {
+       
+        var parameters = [String : AnyObject]()
+        
+        parameters["id"] = id as AnyObject
+        parameters["user"] = user as AnyObject
+        parameters["title"] = title as AnyObject
+        parameters["description"] = description as AnyObject
+        parameters["createdAt"] = createdAt as AnyObject
+        parameters["updatedAt"] = updatedAt as AnyObject
+        
+        return parameters
     }
 }

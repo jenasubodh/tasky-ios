@@ -7,10 +7,10 @@ target 'Tasky' do
 
   # Pods for Tasky
   
-  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'Alamofire', '~> 4.0'
   pod 'Kingfisher', '~> 3.0'
+  pod 'SwiftyJSON', '~> 3.1'
   pod 'R.swift'
-  pod 'RxSwift', '3.0'
   
   target 'TaskyTests' do
     inherit! :search_paths
