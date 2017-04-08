@@ -8,10 +8,11 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
-extension SessionManager : APIManagerProtocol {
+extension SessionManager {
     
-    func apiRequest(_ endpoint: Endpoint, parameters: [String : AnyObject]?, headers: [String : String]?) -> APIRequestProtocol {
+    func apiRequest(_ endpoint: Endpoint, parameters: [String : AnyObject]?, headers: [String : String]?) -> DataRequest {
         
         var commonHeaders = ["Accept" : "application/json"]
         if let headers = headers {

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C73923B0156F10C9276A5DD /* Pods_TaskyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A86CAD20444B0334A385EC /* Pods_TaskyTests.framework */; };
 		68BF2844FE9464E87E33E745 /* Pods_TaskyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111E278C134114A4B66C75B2 /* Pods_TaskyUITests.framework */; };
-		C20013C11E98C88800C2CB3A /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20013C01E98C88800C2CB3A /* APIRequestProtocol.swift */; };
 		C20013C31E98C94800C2CB3A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20013C21E98C94800C2CB3A /* SessionManager.swift */; };
-		C20013C71E98D1D200C2CB3A /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20013C61E98D1D200C2CB3A /* APIManagerProtocol.swift */; };
 		C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */; };
 		C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212ADB61E90D95300DDC0E7 /* Task.swift */; };
 		C212ADB91E90D95300DDC0E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212ADB71E90D95300DDC0E7 /* User.swift */; };
@@ -62,9 +60,7 @@
 		5E244556B4F0525C3DA726AB /* Pods-TaskyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskyTests/Pods-TaskyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EBF84F61E8D1560EBC9C691 /* Pods-TaskyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskyUITests/Pods-TaskyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B4C17CEF357A3F9006762478 /* Pods-Tasky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tasky/Pods-Tasky.release.xcconfig"; sourceTree = "<group>"; };
-		C20013C01E98C88800C2CB3A /* APIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
 		C20013C21E98C94800C2CB3A /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		C20013C61E98D1D200C2CB3A /* APIManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
 		C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		C212ADB61E90D95300DDC0E7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C212ADB71E90D95300DDC0E7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -281,8 +277,6 @@
 		C23E20AB1E97781000575894 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C20013C61E98D1D200C2CB3A /* APIManagerProtocol.swift */,
-				C20013C01E98C88800C2CB3A /* APIRequestProtocol.swift */,
 				C23DC0F71E93FF8000C94F22 /* Endpoint.swift */,
 			);
 			name = Protocols;
@@ -621,10 +615,8 @@
 				C23DC0F81E93FF8000C94F22 /* Endpoint.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,
-				C20013C71E98D1D200C2CB3A /* APIManagerProtocol.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,
 				C212ADB91E90D95300DDC0E7 /* User.swift in Sources */,
-				C20013C11E98C88800C2CB3A /* APIRequestProtocol.swift in Sources */,
 				C23DC0F61E93FF6800C94F22 /* API.swift in Sources */,
 				C240FE771E95538F00B8CC17 /* APIManager.swift in Sources */,
 				C25111981E851450004DD696 /* TaskViewController.swift in Sources */,
