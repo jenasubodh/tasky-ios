@@ -39,6 +39,7 @@ enum Endpoints {
             }
         }
     }
+    
     enum Users: Endpoint {
         
         case GetUsers()
@@ -94,8 +95,8 @@ enum Endpoints {
                 return "\(baseUrl)\(path)"
             }
         }
-        
     }
+    
     enum Tasks: Endpoint {
         
         case GetTasks()
@@ -151,6 +152,5 @@ enum Endpoints {
                 return "\(baseUrl)\(path)"
             }
         }
-        
     }
 }

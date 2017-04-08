@@ -11,10 +11,8 @@ import Alamofire
 
 final class APIManager {
     
-    private let manager: SessionManager
-    
     private init() {
-        self.manager = SessionManager()
+        
     }
     
     static let sharedInstance: APIManager = APIManager()

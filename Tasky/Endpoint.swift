@@ -9,9 +9,21 @@
 import Foundation
 import Alamofire
 
-protocol Endpoint {
+protocol Endpoint : URLRequestConvertible {
 
     var path: String { get }
     var url: String { get }
     var method: HTTPMethod { get }
+}
+
+extension Endpoint {
+   
+    func asURLRequest() throws -> URLRequest {
+        
+        var urlRequest = URLRequest(url: try self.url.asURL())
+        urlRequest.httpMethod = self.method.rawValue
+        
+        let encoding = JSONEncoding.default
+        return try encoding.encode(urlRequest)
+    }
 }
