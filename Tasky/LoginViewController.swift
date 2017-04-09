@@ -35,10 +35,18 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLogin(_ sender: Any) {
         
-        var email = txtEmail.text!
-        var password = txtPassword.text!
+        let email = txtEmail.text!
+        let password = txtPassword.text!
         
-        APIManager.sharedInstance.authenticateUser(email: email, password: password)
+        
+        APIManager.sharedInstance.authenticateUser(email: email, password: password) { (result) in
+            do {
+                let auth = try result.unwrap()
+                print(auth.toParameters())
+            }
+            catch let error as NSError {
+                debugPrint("Get user error: \(error.localizedDescription)")
+            }
+        }
     }
-
 }

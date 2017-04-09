@@ -18,7 +18,6 @@ struct Auth {
 extension Auth {
     
     init(json: JSON) {
-        print(json)
         token = json["token"].stringValue
         user = User(json: json["user"])
     }

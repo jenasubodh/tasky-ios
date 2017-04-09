@@ -22,8 +22,7 @@ final class APIManager {
     
     // MARK :- Authentication
     
-    // func authenticateUser(email: String, password: String, completionHandler: (APIResult<Auth>)) -> Void {
-    func authenticateUser(email: String, password: String) -> Void {
+    func authenticateUser(email: String, password: String, completionHandler: @escaping (APIResult<Auth>) -> Void) {
        
         var headers: HTTPHeaders = [:]
         if let authorizationHeader = Request.authorizationHeader(user: email, password: password) {
@@ -34,17 +33,15 @@ final class APIManager {
         
         manager.apiRequest(Endpoints.Auth.Login(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { response in
             
-            print(response.request!)  // original URL request
-            print(response.response!) // HTTP URL response
-            print(response.data!)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
+            switch response.result {
+            case .success(let json):
+                let authJSON = JSON(json)
+                let auth = Auth(json: authJSON)
+                completionHandler(APIResult{ return auth })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
             }
             
-            let authJSON = JSON(response.data!)
-            let auth = Auth(json: authJSON)
         }
     }
 }

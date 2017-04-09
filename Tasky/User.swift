@@ -23,8 +23,6 @@ extension User {
     
     init(json: JSON) {
         
-        print(json)
-        
         id = json["id"].stringValue
         name = json["name"].stringValue
         email = json["email"].string
