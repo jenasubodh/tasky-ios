@@ -10,10 +10,11 @@ import Foundation
 import SwiftyJSON
 
 struct User {
-
+    
     public var id : String?
 	public var name : String?
 	public var email : String?
+    public var password : String?
     public var picture : String?
     public var createdAt : String?
     public var updatedAt : String?
@@ -35,13 +36,34 @@ extension User {
         
         var parameters = [String : AnyObject]()
         
-        parameters["id"] = id as AnyObject
-        parameters["name"] = name as AnyObject
-        parameters["email"] = email as AnyObject
-        parameters["picture"] = picture as AnyObject
-        parameters["createdAt"] = createdAt as AnyObject
-        parameters["updatedAt"] = updatedAt as AnyObject
+        if let id = id {
+            parameters["id"] = id as AnyObject
+        }
         
+        if let name = name {
+            parameters["name"] = name as AnyObject
+        }
+        
+        if let email = email {
+            parameters["email"] = email as AnyObject
+        }
+        
+        if let password = password {
+            parameters["password"] = password as AnyObject
+        }
+        
+        if let picture = picture {
+            parameters["picture"] = picture as AnyObject
+        }
+        
+        if let createdAt = createdAt {
+            parameters["createdAt"] = createdAt as AnyObject
+        }
+        
+        if let updatedAt = updatedAt {
+            parameters["updatedAt"] = updatedAt as AnyObject
+        }
+
         return parameters
     }
 }

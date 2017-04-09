@@ -34,12 +34,29 @@ extension Task {
        
         var parameters = [String : AnyObject]()
         
-        parameters["id"] = id as AnyObject
-        parameters["user"] = user as AnyObject
-        parameters["title"] = title as AnyObject
-        parameters["description"] = description as AnyObject
-        parameters["createdAt"] = createdAt as AnyObject
-        parameters["updatedAt"] = updatedAt as AnyObject
+        if let id = id {
+            parameters["id"] = id as AnyObject
+        }
+        
+        if let user = user {
+            parameters["user"] = user as AnyObject
+        }
+        
+        if let title = title {
+            parameters["title"] = title as AnyObject
+        }
+        
+        if let description = description {
+            parameters["description"] = description as AnyObject
+        }
+        
+        if let createdAt = createdAt {
+            parameters["createdAt"] = createdAt as AnyObject
+        }
+        
+        if let updatedAt = updatedAt {
+            parameters["updatedAt"] = updatedAt as AnyObject
+        }
         
         return parameters
     }

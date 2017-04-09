@@ -44,5 +44,100 @@ final class APIManager {
             
         }
     }
+    
+    // MARK :- Tasks
+    
+    func createTask(authToken: String, task: Task, completionHandler: @escaping (APIResult<Task>) -> Void) {
+        
+        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let parameters: Parameters = task.toParameters()
+        
+        manager.apiRequest(Endpoints.Tasks.CreateTask(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let json):
+                let taskJSON = JSON(json)
+                let task = Task(json: taskJSON)
+                completionHandler(APIResult{ return task })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
+            }
+        }
+        
+    }
+    
+    func getTasks(authToken: String, completionHandler: @escaping (APIResult<[Task]>) -> Void) {
+        
+        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let parameters: Parameters = [:]
+        
+        manager.apiRequest(Endpoints.Tasks.GetTasks(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let json):
+                let tasks:[Task] = JSON(json).arrayValue.map({ (task) -> Task in
+                    return Task(json: task)
+                })
+                completionHandler(APIResult{ return tasks })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
+            }
+        }
+    }
+    
+    func getTask(authToken: String, taskId: String, completionHandler: @escaping (APIResult<Task>) -> Void) {
+        
+        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let parameters: Parameters = [:]
+        
+        manager.apiRequest(Endpoints.Tasks.GetTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let json):
+                let taskJSON = JSON(json)
+                let task = Task(json: taskJSON)
+                completionHandler(APIResult{ return task })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
+            }
+        }
+    }
+    
+    func updateTask(authToken: String, task: Task, completionHandler: @escaping (APIResult<Task>) -> Void) {
+        
+        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let parameters: Parameters = task.toParameters()
+        
+        manager.apiRequest(Endpoints.Tasks.UpdateTask(taskId: task.id!), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let json):
+                let taskJSON = JSON(json)
+                let task = Task(json: taskJSON)
+                completionHandler(APIResult{ return task })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
+            }
+        }
+        
+    }
+    
+    func deleteTask(authToken: String, taskId: String, completionHandler: @escaping (APIResult<Task>) -> Void) {
+        
+        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let parameters: Parameters = [:]
+        
+        manager.apiRequest(Endpoints.Tasks.DeleteTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let json):
+                let taskJSON = JSON(json)
+                let task = Task(json: taskJSON)
+                completionHandler(APIResult{ return task })
+            case .failure(let error):
+                completionHandler(APIResult{ throw error })
+            }
+        }
+    }
 }
 
