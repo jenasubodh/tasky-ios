@@ -45,6 +45,10 @@ final class APIManager {
         }
     }
     
+    // MARK :- Users
+    
+    
+    
     // MARK :- Tasks
     
     func createTask(authToken: String, task: Task, completionHandler: @escaping (APIResult<Task>) -> Void) {

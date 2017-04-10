@@ -28,6 +28,8 @@
 		C240FE771E95538F00B8CC17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240FE761E95538F00B8CC17 /* APIManager.swift */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
+		C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63201E9BE7B300E513AC /* Utilities.swift */; };
+		C29A63231E9BE7CC00E513AC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63221E9BE7CC00E513AC /* Keys.swift */; };
 		C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */; };
 		C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D029B31E915C0600A89F10 /* R.generated.swift */; };
 		C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E741E91279D0057E087 /* LoginViewController.swift */; };
@@ -86,6 +88,8 @@
 		C240FE761E95538F00B8CC17 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		C29A63201E9BE7B300E513AC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C29A63221E9BE7CC00E513AC /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
 		C2D029B31E915C0600A89F10 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2F19E741E91279D0057E087 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				C23E20B61E9799BF00575894 /* Globals.swift */,
+				C29A63201E9BE7B300E513AC /* Utilities.swift */,
+				C29A63221E9BE7CC00E513AC /* Keys.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -304,9 +310,17 @@
 		C28F29C61E88493A00F0CF68 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */,
+				C29A63241E9BEA8A00E513AC /* View */,
 			);
 			name = Tasks;
+			sourceTree = "<group>";
+		};
+		C29A63241E9BEA8A00E513AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,6 +628,8 @@
 				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
 				C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */,
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
+				C29A63231E9BE7CC00E513AC /* Keys.swift in Sources */,
+				C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */,
 				C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */,
 				C23E20B31E97962B00575894 /* APIResult.swift in Sources */,
 				C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */,
