@@ -99,8 +99,8 @@ enum Endpoints {
     
     enum Tasks: EndpointProtocol {
         
-        case GetTasks()
-        case GetTask(taskId: String)
+        case GetTasks(authKey: String)
+        case GetTask(authKey: String, taskId: String)
         case CreateTask()
         case UpdateTask(taskId: String)
         case DeleteTask(taskId: String)
@@ -122,10 +122,10 @@ enum Endpoints {
         
         public var path: String {
             switch self {
-            case .GetTasks:
-                return "tasks"
-            case .GetTask(let taskId):
-                return "tasks/\(taskId)"
+            case .GetTasks(let authKey):
+                return "tasks?access_token=\(authKey)"
+            case .GetTask(let authKey, let taskId):
+                return "tasks/\(taskId)?access_token=\(authKey)"
             case .CreateTask:
                 return "tasks"
             case .UpdateTask(let taskId):

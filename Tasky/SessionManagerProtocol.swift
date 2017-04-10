@@ -12,5 +12,4 @@ import Alamofire
 protocol SessionManagerProtocol {
 
     func apiRequest(endpoint: EndpointProtocol, parameters: [String : AnyObject]?, headers: [String : String]?) -> DataRequest
-    func apiRequest(authToken : String?, endpoint: EndpointProtocol, parameters: [String : AnyObject]?, headers: [String : String]?) -> DataRequest
 }

@@ -68,20 +68,8 @@ final class APIManager {
     }
     
     func getTasks(authToken: String, completionHandler: @escaping (APIResult<[Task]>) -> Void) {
-        
-        let headers: HTTPHeaders = [:]
-        let parameters: Parameters = [:]
-        
-        manager.apiRequest(authToken: authToken, endpoint: Endpoints.Tasks.GetTasks(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
-            
-            print(response.request!)  // original URL request
-            print(response.response!) // HTTP URL response
-            print(response.data!)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+    
+        manager.apiRequest(endpoint: Endpoints.Tasks.GetTasks(authKey: authToken), parameters: nil, headers: nil).responseJSON { (response) in
             
             switch response.result {
             case .success(let json):
@@ -97,12 +85,8 @@ final class APIManager {
     
     func getTask(authToken: String, taskId: String, completionHandler: @escaping (APIResult<Task>) -> Void) {
         
-        let headers: HTTPHeaders = [:]
-        var parameters: Parameters = [:]
-        parameters += ["access_token": authToken]
+        manager.apiRequest(endpoint: Endpoints.Tasks.GetTask(authKey: authToken,taskId: taskId), parameters: nil, headers: nil).responseJSON { (response) in
         
-        manager.apiRequest(endpoint: Endpoints.Tasks.GetTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
-            
             switch response.result {
             case .success(let json):
                 let taskJSON = JSON(json)

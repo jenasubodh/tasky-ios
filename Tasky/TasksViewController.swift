@@ -38,8 +38,6 @@ class TasksViewController: UIViewController {
         else {
             self.loadTasks()
         }
-        
-        print("\(tasks.count) Tasks Loaded !!")
     }
 
     override func didReceiveMemoryWarning() {
