@@ -12,7 +12,7 @@ import SwiftyJSON
 
 final class APIManager {
     
-    fileprivate let manager: SessionManager
+    fileprivate let manager: SessionManagerProtocol
     
     private init() {
         self.manager = SessionManager()
@@ -31,7 +31,7 @@ final class APIManager {
         
         let parameters: Parameters = ["access_token": API.masterKey]
         
-        manager.apiRequest(Endpoints.Auth.Login(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { response in
+        manager.apiRequest(endpoint: Endpoints.Auth.Login(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { response in
             
             switch response.result {
             case .success(let json):
@@ -49,10 +49,11 @@ final class APIManager {
     
     func createTask(authToken: String, task: Task, completionHandler: @escaping (APIResult<Task>) -> Void) {
         
-        let headers: HTTPHeaders = ["access_token": API.masterKey]
-        let parameters: Parameters = task.toParameters()
+        let headers: HTTPHeaders = [:]
+        var parameters: Parameters = task.toParameters()
+        parameters += ["access_token": authToken]
         
-        manager.apiRequest(Endpoints.Tasks.CreateTask(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+        manager.apiRequest(endpoint: Endpoints.Tasks.CreateTask(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success(let json):
@@ -68,10 +69,19 @@ final class APIManager {
     
     func getTasks(authToken: String, completionHandler: @escaping (APIResult<[Task]>) -> Void) {
         
-        let headers: HTTPHeaders = ["access_token": API.masterKey]
+        let headers: HTTPHeaders = [:]
         let parameters: Parameters = [:]
         
-        manager.apiRequest(Endpoints.Tasks.GetTasks(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+        manager.apiRequest(authToken: authToken, endpoint: Endpoints.Tasks.GetTasks(), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+            
+            print(response.request!)  // original URL request
+            print(response.response!) // HTTP URL response
+            print(response.data!)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
             
             switch response.result {
             case .success(let json):
@@ -87,10 +97,11 @@ final class APIManager {
     
     func getTask(authToken: String, taskId: String, completionHandler: @escaping (APIResult<Task>) -> Void) {
         
-        let headers: HTTPHeaders = ["access_token": API.masterKey]
-        let parameters: Parameters = [:]
+        let headers: HTTPHeaders = [:]
+        var parameters: Parameters = [:]
+        parameters += ["access_token": authToken]
         
-        manager.apiRequest(Endpoints.Tasks.GetTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+        manager.apiRequest(endpoint: Endpoints.Tasks.GetTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success(let json):
@@ -105,10 +116,11 @@ final class APIManager {
     
     func updateTask(authToken: String, task: Task, completionHandler: @escaping (APIResult<Task>) -> Void) {
         
-        let headers: HTTPHeaders = ["access_token": API.masterKey]
-        let parameters: Parameters = task.toParameters()
+        let headers: HTTPHeaders = [:]
+        var parameters: Parameters = task.toParameters()
+        parameters += ["access_token": authToken]
         
-        manager.apiRequest(Endpoints.Tasks.UpdateTask(taskId: task.id!), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+        manager.apiRequest(endpoint: Endpoints.Tasks.UpdateTask(taskId: task.id!), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success(let json):
@@ -124,10 +136,11 @@ final class APIManager {
     
     func deleteTask(authToken: String, taskId: String, completionHandler: @escaping (APIResult<Task>) -> Void) {
         
-        let headers: HTTPHeaders = ["access_token": API.masterKey]
-        let parameters: Parameters = [:]
+        let headers: HTTPHeaders = [:]
+        var parameters: Parameters = [:]
+        parameters += ["access_token": authToken]
         
-        manager.apiRequest(Endpoints.Tasks.DeleteTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
+        manager.apiRequest(endpoint: Endpoints.Tasks.DeleteTask(taskId: taskId), parameters: parameters as [String : AnyObject], headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success(let json):

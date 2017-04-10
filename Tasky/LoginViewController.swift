@@ -39,11 +39,21 @@ class LoginViewController: UIViewController {
         APIManager.sharedInstance.authenticateUser(email: email, password: password) { (result) in
             do {
                 let auth = try result.unwrap()
-                print(auth.toParameters())
+                
+                Utilities.setAuthKey(authKey: auth.token!)
+            
+                // Dismiss Login
+                self.dismissLogin()
             }
             catch let error as NSError {
                 debugPrint("Get user error: \(error.localizedDescription)")
             }
         }
+    }
+
+    // MARK: - Private Functions
+    
+    private func dismissLogin()  {
+        self.dismiss(animated: true, completion: nil)
     }
 }

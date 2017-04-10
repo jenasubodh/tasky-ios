@@ -52,7 +52,7 @@
                         <action selector="didTapAdd:" destination="BYZ-38-t0r" id="CEb-Ml-LAt"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem image="edit" id="AjY-MR-FTA">
+                <barButtonItem systemItem="edit" id="AjY-MR-FTA">
                     <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="didTapEdit:" destination="BYZ-38-t0r" id="DEa-3p-IAB"/>
@@ -84,7 +84,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2T-fI-qMT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eLl-D6-Ls6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLl-D6-Ls6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,6 +130,5 @@
         <image name="cancel" width="24" height="24"/>
         <image name="delete" width="24" height="24"/>
         <image name="done" width="24" height="24"/>
-        <image name="edit" width="24" height="24"/>
     </resources>
 </document>

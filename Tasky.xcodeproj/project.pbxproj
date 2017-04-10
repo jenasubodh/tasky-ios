@@ -20,7 +20,7 @@
 		C22B40E21E7BABC1009DE62B /* TaskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40E11E7BABC1009DE62B /* TaskyTests.swift */; };
 		C22B40ED1E7BABC1009DE62B /* TaskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40EC1E7BABC1009DE62B /* TaskyUITests.swift */; };
 		C23DC0F61E93FF6800C94F22 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F51E93FF6800C94F22 /* API.swift */; };
-		C23DC0F81E93FF8000C94F22 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F71E93FF8000C94F22 /* Endpoint.swift */; };
+		C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F71E93FF8000C94F22 /* EndpointProtocol.swift */; };
 		C23DC0FA1E93FFA200C94F22 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23DC0F91E93FFA200C94F22 /* Endpoints.swift */; };
 		C23E20B11E9794C300575894 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E20B01E9794C300575894 /* Auth.swift */; };
 		C23E20B31E97962B00575894 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E20B21E97962B00575894 /* APIResult.swift */; };
@@ -28,6 +28,7 @@
 		C240FE771E95538F00B8CC17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240FE761E95538F00B8CC17 /* APIManager.swift */; };
 		C25111981E851450004DD696 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25111971E851450004DD696 /* TaskViewController.swift */; };
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
+		C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */; };
 		C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D029B31E915C0600A89F10 /* R.generated.swift */; };
 		C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E741E91279D0057E087 /* LoginViewController.swift */; };
 		C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */; };
@@ -77,7 +78,7 @@
 		C22B40EC1E7BABC1009DE62B /* TaskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITests.swift; sourceTree = "<group>"; };
 		C22B40EE1E7BABC1009DE62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C23DC0F51E93FF6800C94F22 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		C23DC0F71E93FF8000C94F22 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C23DC0F71E93FF8000C94F22 /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		C23DC0F91E93FFA200C94F22 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C23E20B01E9794C300575894 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C23E20B21E97962B00575894 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		C240FE761E95538F00B8CC17 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C25111971E851450004DD696 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
 		C2D029B31E915C0600A89F10 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2F19E741E91279D0057E087 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2F19E761E9127AF0057E087 /* RegisrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisrationViewController.swift; sourceTree = "<group>"; };
@@ -210,9 +212,9 @@
 		C212ADBE1E90E38800DDC0E7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C23E20B21E97962B00575894 /* APIResult.swift */,
 				C23E20AB1E97781000575894 /* Protocols */,
 				C23DC0F51E93FF6800C94F22 /* API.swift */,
-				C23E20B21E97962B00575894 /* APIResult.swift */,
 				C23DC0F91E93FFA200C94F22 /* Endpoints.swift */,
 				C20013C21E98C94800C2CB3A /* SessionManager.swift */,
 				C240FE761E95538F00B8CC17 /* APIManager.swift */,
@@ -277,7 +279,8 @@
 		C23E20AB1E97781000575894 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C23DC0F71E93FF8000C94F22 /* Endpoint.swift */,
+				C23DC0F71E93FF8000C94F22 /* EndpointProtocol.swift */,
+				C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -611,8 +614,9 @@
 				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
 				C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */,
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
+				C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */,
 				C23E20B31E97962B00575894 /* APIResult.swift in Sources */,
-				C23DC0F81E93FF8000C94F22 /* Endpoint.swift in Sources */,
+				C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,

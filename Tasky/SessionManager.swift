@@ -10,15 +10,36 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-extension SessionManager {
+extension SessionManager : SessionManagerProtocol{
     
-    func apiRequest(_ endpoint: Endpoint, parameters: [String : AnyObject]?, headers: [String : String]?) -> DataRequest {
+    func apiRequest(endpoint: EndpointProtocol, parameters: [String : AnyObject]? = nil, headers: [String : String]? = nil) -> DataRequest {
         
         var commonHeaders = ["Accept" : "application/json"]
         if let headers = headers {
             commonHeaders += headers
         }
         
-        return request(endpoint.url, method: endpoint.method, parameters: parameters, encoding: JSONEncoding.default, headers: commonHeaders)
+        let req = request(endpoint.url, method: endpoint.method, parameters: parameters, encoding: JSONEncoding.default, headers: commonHeaders)
+        
+        print(endpoint.url)
+        
+        return req
+    }
+    
+    func apiRequest(authToken : String? = nil, endpoint: EndpointProtocol, parameters: [String : AnyObject]? = nil, headers: [String : String]? = nil) -> DataRequest {
+        
+        var commonHeaders = ["Accept" : "application/json"]
+        if let headers = headers {
+            commonHeaders += headers
+        }
+        
+        var urlWithAuthToken = endpoint.url
+        if(authToken != nil){
+            urlWithAuthToken.append("?access_token=\(authToken!)")
+        }
+        
+        let req = request(urlWithAuthToken, method: endpoint.method, parameters: parameters, encoding: JSONEncoding.default, headers: commonHeaders)
+        
+        return req
     }
 }

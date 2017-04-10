@@ -26,12 +26,20 @@ class TasksViewController: UIViewController {
     // MARK: - View Controller Overrides
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
 
         self.navigationItem.leftBarButtonItem = barButtonEdit
         self.navigationItem.rightBarButtonItem = barButtonAdd
         
-        startLogin()
+        if(!isLoggedIn()) {
+            startLogin()
+        }
+        else {
+            self.loadTasks()
+        }
+        
+        print("\(tasks.count) Tasks Loaded !!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +57,26 @@ class TasksViewController: UIViewController {
     }
 
     // MARK: - Private Functions
+    
+    func loadTasks()  {
+        APIManager.sharedInstance.getTasks(authToken: Utilities.getAuthKey()!) { (result) in
+            do {
+                self.tasks = try result.unwrap()
+            }
+            catch let error as NSError {
+                debugPrint("Get user error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func isLoggedIn() -> Bool {
+        
+        if Utilities.getAuthKey() != nil {
+            return true
+        }
+        
+        return false
+    }
     
     private func startLogin() {
         

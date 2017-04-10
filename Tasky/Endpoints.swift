@@ -11,7 +11,7 @@ import Alamofire
 
 enum Endpoints {
     
-    enum Auth: Endpoint {
+    enum Auth: EndpointProtocol {
         
         case Login()
         
@@ -40,7 +40,7 @@ enum Endpoints {
         }
     }
     
-    enum Users: Endpoint {
+    enum Users: EndpointProtocol {
         
         case GetUsers()
         case GetUser(userId: String)
@@ -97,7 +97,7 @@ enum Endpoints {
         }
     }
     
-    enum Tasks: Endpoint {
+    enum Tasks: EndpointProtocol {
         
         case GetTasks()
         case GetTask(taskId: String)

@@ -9,14 +9,14 @@
 import Foundation
 import Alamofire
 
-protocol Endpoint : URLRequestConvertible {
+protocol EndpointProtocol : URLRequestConvertible {
 
     var path: String { get }
     var url: String { get }
     var method: HTTPMethod { get }
 }
 
-extension Endpoint {
+extension EndpointProtocol {
    
     func asURLRequest() throws -> URLRequest {
         
