@@ -280,6 +280,34 @@
 			path = TaskyUITests;
 			sourceTree = "<group>";
 		};
+		C22DBB941EA002C7003DB910 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		C22DBB951EA002D5003DB910 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		C22DBB961EA002DD003DB910 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C22DBB971EA002F3003DB910 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Contract;
+			sourceTree = "<group>";
+		};
 		C23E20AB1E97781000575894 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +338,10 @@
 		C28F29C61E88493A00F0CF68 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				C22DBB971EA002F3003DB910 /* Contract */,
+				C22DBB961EA002DD003DB910 /* Presenter */,
+				C22DBB951EA002D5003DB910 /* Interactor */,
+				C22DBB941EA002C7003DB910 /* Router */,
 				C29A63241E9BEA8A00E513AC /* View */,
 			);
 			name = Tasks;

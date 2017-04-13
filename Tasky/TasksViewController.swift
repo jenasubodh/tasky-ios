@@ -12,9 +12,8 @@ class TasksViewController: UIViewController {
 
     // MARK: - Private Declarations
     
-    private var tasks : [Task] = [] {
+    var tasks : [Task] = [] {
         didSet {
-            print("\(tasks.count) Tasks Loaded")
             tableView.reloadData()
         }
     }
