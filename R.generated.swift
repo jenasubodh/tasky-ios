@@ -185,12 +185,24 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      let taskViewController = StoryboardViewControllerResource<TaskViewController>(identifier: "TaskViewController")
+      let tasksViewController = StoryboardViewControllerResource<TasksViewController>(identifier: "TasksViewController")
+      
+      func taskViewController(_: Void = ()) -> TaskViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: taskViewController)
+      }
+      
+      func tasksViewController(_: Void = ()) -> TasksViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tasksViewController)
+      }
       
       static func validate() throws {
         if UIKit.UIImage(named: "cancel") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'Main', but couldn't be loaded.") }
+        if _R.storyboard.main().taskViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'taskViewController' could not be loaded from storyboard 'Main' as 'TaskViewController'.") }
+        if _R.storyboard.main().tasksViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tasksViewController' could not be loaded from storyboard 'Main' as 'TasksViewController'.") }
       }
       
       fileprivate init() {}

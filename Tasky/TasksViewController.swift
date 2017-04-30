@@ -10,6 +10,8 @@ import UIKit
 
 class TasksViewController: UIViewController {
 
+    var presenter: TasksPresentationProtocol!
+    
     // MARK: - Private Declarations
     
     var tasks : [Task] = [] {
@@ -40,7 +42,7 @@ class TasksViewController: UIViewController {
             startLogin()
         }
         else {
-            self.loadTasks()
+            presenter.viewDidLoad()
         }
     }
 
@@ -59,17 +61,6 @@ class TasksViewController: UIViewController {
     }
 
     // MARK: - Private Functions
-    
-    func loadTasks()  {
-        APIManager.sharedInstance.getTasks(authToken: Utilities.getAuthKey()!) { (result) in
-            do {
-                self.tasks = try result.unwrap()
-            }
-            catch let error as NSError {
-                debugPrint("Get user error: \(error.localizedDescription)")
-            }
-        }
-    }
     
     private func isLoggedIn() -> Bool {
         
@@ -108,5 +99,16 @@ class TasksViewController: UIViewController {
     
     @IBAction func didTapDone(_ sender: Any) {
         
+    }
+}
+
+extension TasksViewController: TasksViewProtocol {
+    
+    func showNoContentScreen() {
+        
+    }
+    
+    func showTasksData(tasks: [Task]) {
+        self.tasks = tasks
     }
 }
