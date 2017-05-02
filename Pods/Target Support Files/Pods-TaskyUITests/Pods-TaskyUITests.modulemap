@@ -1,0 +1,6 @@
+framework module Pods_TaskyUITests {
+  umbrella header "Pods-TaskyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
