@@ -10,6 +10,7 @@ target 'Tasky' do
   pod 'Alamofire', '~> 4.0'
   pod 'Kingfisher', '~> 3.0'
   pod 'SwiftyJSON', '~> 3.1'
+  pod 'APESuperHUD', '~> 1.1'
   pod 'R.swift'
   
   target 'TaskyTests' do
