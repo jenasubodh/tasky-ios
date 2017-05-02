@@ -56,15 +56,6 @@ class TasksViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-        if(segue.identifier == "TaskEditor") {
-            
-        }
-    }
-
     // MARK: - Private Functions
     
     private func isLoggedIn() -> Bool {
@@ -87,7 +78,8 @@ class TasksViewController: UIViewController {
     
     @IBAction func didTapAdd(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "TaskEditor", sender: self)
+        var task = Task()
+        self.presenter.router.presentDetails(forTask: task)
     }
     
     @IBAction func didTapEdit(_ sender: Any) {
@@ -143,7 +135,7 @@ extension TasksViewController: UITableViewDataSource {
 extension TasksViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.didSelectTask(tasks[indexPath.row])
     }
 }
 

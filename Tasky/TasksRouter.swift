@@ -51,7 +51,7 @@ class TasksRouter : NSObject, TasksWireframe {
     
     func presentDetails(forTask task: Task) {
         
-        //let detailsModuleViewController = DetailsRouter.assembleModule(task)
-        //viewController?.navigationController?.pushViewController(detailsModuleViewController, animated: true)
+        let taskEditorViewController = TaskRouter.assembleModule(task)
+        viewController?.navigationController?.pushViewController(taskEditorViewController, animated: true)
     }
 }

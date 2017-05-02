@@ -9,7 +9,9 @@
 import UIKit
 
 class TaskViewController: UIViewController {
-
+    
+    var presenter: TaskPresentationProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,5 +25,12 @@ class TaskViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+    }
+}
+
+extension TaskViewController: TaskViewProtocol {
+    
+    func showDetails(forTask task: Task){
+        
     }
 }
