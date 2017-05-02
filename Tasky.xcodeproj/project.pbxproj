@@ -34,6 +34,8 @@
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
 		C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63201E9BE7B300E513AC /* Utilities.swift */; };
 		C29A63231E9BE7CC00E513AC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63221E9BE7CC00E513AC /* Keys.swift */; };
+		C2AE51911EB89711007824BA /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51901EB89711007824BA /* ViewProtocols.swift */; };
+		C2AE51941EB89759007824BA /* IndicatableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */; };
 		C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */; };
 		C2D029B41E915C0600A89F10 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D029B31E915C0600A89F10 /* R.generated.swift */; };
 		C2E706E91EB5A9F900A667CC /* TasksViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E706E81EB5A9F900A667CC /* TasksViewProtocol.swift */; };
@@ -107,6 +109,8 @@
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A63201E9BE7B300E513AC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C29A63221E9BE7CC00E513AC /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		C2AE51901EB89711007824BA /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
+		C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatableViewExtension.swift; sourceTree = "<group>"; };
 		C2C620971E9A904A00A917A9 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
 		C2D029B31E915C0600A89F10 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2E706E81EB5A9F900A667CC /* TasksViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewProtocol.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 		C22B40CB1E7BABC1009DE62B /* Tasky */ = {
 			isa = PBXGroup;
 			children = (
+				C2AE51921EB8972D007824BA /* Extensions */,
+				C2AE518F1EB89625007824BA /* Protocols */,
 				C2E706F61EB5B32100A667CC /* Enumerations */,
 				C23E20B51E9799B200575894 /* Utilities */,
 				C212ADBA1E90D96100DDC0E7 /* Application */,
@@ -400,6 +406,22 @@
 				C2602D331EB85F5B00CB4055 /* TaskTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C2AE518F1EB89625007824BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE51901EB89711007824BA /* ViewProtocols.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C2AE51921EB8972D007824BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		C2E706F61EB5B32100A667CC /* Enumerations */ = {
@@ -720,10 +742,12 @@
 				C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */,
 				C29A63231E9BE7CC00E513AC /* Keys.swift in Sources */,
 				C2E706F81EB5B33600A667CC /* TasksSortType.swift in Sources */,
+				C2AE51941EB89759007824BA /* IndicatableViewExtension.swift in Sources */,
 				C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */,
 				C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */,
 				C23E20B31E97962B00575894 /* APIResult.swift in Sources */,
 				C2602D351EB85F5B00CB4055 /* TaskTableViewCell.swift in Sources */,
+				C2AE51911EB89711007824BA /* ViewProtocols.swift in Sources */,
 				C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,

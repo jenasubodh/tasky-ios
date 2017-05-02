@@ -27,10 +27,11 @@ class TasksPresenter : TasksPresentationProtocol
     
     func viewDidLoad() {
         interactor.fetchTasks()
+        view?.showActivityIndicator()
     }
     
     func didClickSortButton() {
-        interactor.fetchTasks()
+        
     }
     
     func didSelectTask(_ task: Task) {
@@ -42,9 +43,11 @@ extension TasksPresenter : TasksInteractorOutput {
     
     func tasksFetched(tasks: [Task]) {
         self.tasks = tasks
+        view?.hideActivityIndicator()
     }
     
     func articlesFetchFailed() {
         view?.showNoContentScreen()
+        view?.hideActivityIndicator()
     }
 }

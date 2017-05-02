@@ -9,7 +9,9 @@
 import Foundation
 
 
-protocol TasksViewProtocol: class {
+protocol TasksViewProtocol: IndicatableView {
+    
+    var presenter: TasksPresentationProtocol! { get set }
     
     func showTasksData(tasks: [Task])
     func showNoContentScreen()
