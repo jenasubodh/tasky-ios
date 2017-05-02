@@ -200,15 +200,6 @@
 			name = Modules;
 			sourceTree = "<group>";
 		};
-		C2051CC61E7FE47900B2E706 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */,
-				C296C6B01E885286008C84EE /* Authentication.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
 		C212ADB51E90D8F800DDC0E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +221,8 @@
 		C212ADBB1E90D97200DDC0E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C296C6B01E885286008C84EE /* Authentication.storyboard */,
+				C22B40D51E7BABC1009DE62B /* LaunchScreen.storyboard */,
 				C2D029B31E915C0600A89F10 /* R.generated.swift */,
 				C22B40D31E7BABC1009DE62B /* Assets.xcassets */,
 				C22B40D81E7BABC1009DE62B /* Info.plist */,
@@ -293,7 +286,6 @@
 			children = (
 				C212ADBA1E90D96100DDC0E7 /* Application */,
 				C212ADBB1E90D97200DDC0E7 /* Resources */,
-				C2051CC61E7FE47900B2E706 /* Storyboards */,
 				C2AE518F1EB89625007824BA /* Protocols */,
 				C2AE51921EB8972D007824BA /* Extensions */,
 				C2E706F61EB5B32100A667CC /* Enumerations */,
