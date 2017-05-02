@@ -23,10 +23,7 @@ class TasksViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet var barButtonAdd: UIBarButtonItem!
-    @IBOutlet var barButtonDone: UIBarButtonItem!
-    @IBOutlet var barButtonDelete: UIBarButtonItem!
     @IBOutlet var barButtonEdit: UIBarButtonItem!
-    @IBOutlet var barButtonCancel: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - View Controller Overrides
@@ -78,23 +75,11 @@ class TasksViewController: UIViewController {
     
     @IBAction func didTapAdd(_ sender: Any) {
         
-        var task = Task()
+        let task = Task()
         self.presenter.router.presentDetails(forTask: task)
     }
     
     @IBAction func didTapEdit(_ sender: Any) {
-        
-    }
-    
-    @IBAction func didTapDelete(_ sender: Any) {
-        
-    }
-    
-    @IBAction func didTapCancel(_ sender: Any) {
-        
-    }
-    
-    @IBAction func didTapDone(_ sender: Any) {
         
     }
 }

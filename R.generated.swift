@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
     /// Image `add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "add")
@@ -41,6 +41,8 @@ struct R: Rswift.Validatable {
     static let delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "delete")
     /// Image `done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "done")
+    /// Image `settings`.
+    static let settings = Rswift.ImageResource(bundle: R.hostingBundle, name: "settings")
     
     /// `UIImage(named: "add", bundle: ..., traitCollection: ...)`
     static func add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -60,6 +62,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "done", bundle: ..., traitCollection: ...)`
     static func done(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.done, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "settings", bundle: ..., traitCollection: ...)`
+    static func settings(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.settings, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -186,7 +193,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Task', but couldn't be loaded.") }
         if _R.storyboard.task().taskViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'taskViewController' could not be loaded from storyboard 'Task' as 'TaskViewController'.") }
       }
       
@@ -203,10 +209,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "cancel") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel' is used in storyboard 'Tasks', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Tasks', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Tasks', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'Tasks', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "settings") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'settings' is used in storyboard 'Tasks', but couldn't be loaded.") }
         if _R.storyboard.tasks().tasksViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tasksViewController' could not be loaded from storyboard 'Tasks' as 'TasksViewController'.") }
       }
       
