@@ -35,6 +35,11 @@ class TasksViewController: UIViewController {
        
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60.0
+        
         self.navigationItem.leftBarButtonItem = barButtonEdit
         self.navigationItem.rightBarButtonItem = barButtonAdd
         
@@ -112,3 +117,33 @@ extension TasksViewController: TasksViewProtocol {
         self.tasks = tasks
     }
 }
+
+extension TasksViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell") as! TaskTableViewCell
+        let task = tasks[indexPath.row]
+        
+        cell.selectionStyle = .none
+        cell.setUpCell(task: task)
+        
+        return cell
+    }
+}
+
+extension TasksViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+

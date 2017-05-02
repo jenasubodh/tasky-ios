@@ -22,12 +22,12 @@ struct Task {
 extension Task {
     
     init(json: JSON) {
-        id = json["id"].stringValue
+        id = json["id"].string!
         user = User(json: json["user"])
-        title = json["title"].stringValue
-        description = json["description"].string
-        createdAt = json["createdAt"].string
-        updatedAt = json["updatedAt"].string
+        title = json["title"].string!
+        description = json["description"].string!
+        createdAt = json["createdAt"].string!
+        updatedAt = json["updatedAt"].string!
     }
     
     func toParameters() -> [String : AnyObject] {

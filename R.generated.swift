@@ -70,39 +70,29 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
-    fileprivate init() {}
-  }
-  
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
-  struct segue {
-    /// This struct is generated for `TasksViewController`, and contains static references to 1 segues.
-    struct tasksViewController {
-      /// Segue identifier `TaskEditor`.
-      static let taskEditor: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TasksViewController, TaskViewController> = Rswift.StoryboardSegueIdentifier(identifier: "TaskEditor")
-      
-      /// Optionally returns a typed version of segue `TaskEditor`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func taskEditor(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TasksViewController, TaskViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.tasksViewController.taskEditor, segue: segue)
-      }
-      
-      fileprivate init() {}
-    }
+    /// Reuse identifier `TaskTableViewCell`.
+    static let taskTableViewCell: Rswift.ReuseIdentifier<TaskTableViewCell> = Rswift.ReuseIdentifier(identifier: "TaskTableViewCell")
     
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  struct segue {
+    fileprivate init() {}
+  }
+  
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     /// Storyboard `Authentication`.
     static let authentication = _R.storyboard.authentication()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
+    /// Storyboard `Task`.
+    static let task = _R.storyboard.task()
+    /// Storyboard `Tasks`.
+    static let tasks = _R.storyboard.tasks()
     
     /// `UIStoryboard(name: "Authentication", bundle: ...)`
     static func authentication(_: Void = ()) -> UIKit.UIStoryboard {
@@ -114,9 +104,14 @@ struct R: Rswift.Validatable {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
     }
     
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
+    /// `UIStoryboard(name: "Task", bundle: ...)`
+    static func task(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.task)
+    }
+    
+    /// `UIStoryboard(name: "Tasks", bundle: ...)`
+    static func tasks(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.tasks)
     }
     
     fileprivate init() {}
@@ -151,8 +146,9 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try tasks.validate()
       try authentication.validate()
-      try main.validate()
+      try task.validate()
     }
     
     struct authentication: Rswift.StoryboardResourceType, Rswift.Validatable {
@@ -180,29 +176,38 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
-      
+    struct task: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
-      let name = "Main"
+      let name = "Task"
       let taskViewController = StoryboardViewControllerResource<TaskViewController>(identifier: "TaskViewController")
-      let tasksViewController = StoryboardViewControllerResource<TasksViewController>(identifier: "TasksViewController")
       
       func taskViewController(_: Void = ()) -> TaskViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: taskViewController)
       }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Task', but couldn't be loaded.") }
+        if _R.storyboard.task().taskViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'taskViewController' could not be loaded from storyboard 'Task' as 'TaskViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct tasks: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "Tasks"
+      let tasksViewController = StoryboardViewControllerResource<TasksViewController>(identifier: "TasksViewController")
       
       func tasksViewController(_: Void = ()) -> TasksViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tasksViewController)
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "cancel") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'Main', but couldn't be loaded.") }
-        if _R.storyboard.main().taskViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'taskViewController' could not be loaded from storyboard 'Main' as 'TaskViewController'.") }
-        if _R.storyboard.main().tasksViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tasksViewController' could not be loaded from storyboard 'Main' as 'TasksViewController'.") }
+        if UIKit.UIImage(named: "cancel") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel' is used in storyboard 'Tasks', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "done") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done' is used in storyboard 'Tasks', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "add") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Tasks', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "delete") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'Tasks', but couldn't be loaded.") }
+        if _R.storyboard.tasks().tasksViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tasksViewController' could not be loaded from storyboard 'Tasks' as 'TasksViewController'.") }
       }
       
       fileprivate init() {}

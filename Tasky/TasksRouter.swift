@@ -16,7 +16,7 @@ class TasksRouter : NSObject, TasksWireframe {
     
     static func assembleModule() -> UIViewController {
      
-        let view = R.storyboard.main().instantiateViewController(withIdentifier: "TasksViewController") as! TasksViewController
+        let view = R.storyboard.tasks().instantiateViewController(withIdentifier: "TasksViewController") as! TasksViewController
         
         let presenter = TasksPresenter()
         let interactor = TasksInteractor()
