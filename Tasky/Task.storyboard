@@ -23,8 +23,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Task" id="K8F-Hj-vAi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ptd-0r-ehR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ptd-0r-ehR">
+                            <connections>
+                                <action selector="didTapSave:" destination="wSh-bk-k43" id="G5f-B9-EgX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barButtonSave" destination="Ptd-0r-ehR" id="W9O-ho-Bmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U63-hO-4SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

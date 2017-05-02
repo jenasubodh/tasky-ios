@@ -7,24 +7,61 @@
 //
 
 import UIKit
+import Eureka
 
-class TaskViewController: UIViewController {
+class TaskViewController: FormViewController {
+    
+    // Form Tags
+    
+    let taskTitle = "taskTitle"
+    let taskDateTime = "taskDateTime"
+    let taskDescription = "taskDescription"
+    
+    @IBOutlet weak var barButtonSave: UIBarButtonItem!
     
     var presenter: TaskPresentationProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpView()
+        self.presenter.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+    
+    // MARK: - View Setup
+    
+    private func setUpView(){
+        
+        form +++ Section("Task")
+            <<< TextRow(){ row in
+                row.title = "Title"
+                row.tag = taskTitle
+                row.placeholder = "Task Title"
+            }
+            <<< DateTimeRow() {
+                $0.title = "When"
+                $0.tag = taskDateTime
+                $0.value = Date(timeIntervalSinceReferenceDate: 0)
+            }
+            
+        form +++ Section("Details")
+            <<< TextAreaRow(){
+                $0.title = "Description"
+                $0.tag = taskDescription
+                $0.textAreaHeight = TextAreaHeight.dynamic(initialTextViewHeight: 90)
+                $0.placeholder = "Task Description"
+            }
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func didTapSave(_ sender: Any) {
+        
+        let valuesDictionary = form.values()
+        print(valuesDictionary)
     }
 }
 
@@ -32,5 +69,10 @@ extension TaskViewController: TaskViewProtocol {
     
     func showDetails(forTask task: Task){
         
+        let titleRow: TextRow? = form.rowBy(tag: taskTitle)
+        titleRow?.value = task.title
+        
+        let descriptionRow: TextAreaRow? = form.rowBy(tag: taskDescription)
+        descriptionRow?.value = task.description
     }
 }
