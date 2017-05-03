@@ -37,6 +37,10 @@ class TasksPresenter : TasksPresentationProtocol
     func didSelectTask(_ task: Task) {
         router.presentDetails(forTask: task)
     }
+    
+    func didSelectSettings() {
+        router.presentSettings()
+    }
 }
 
 extension TasksPresenter : TasksInteractorOutput {

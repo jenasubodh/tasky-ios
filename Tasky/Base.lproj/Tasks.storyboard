@@ -22,45 +22,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-GQ-xLW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-GQ-xLW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskTableViewCell" rowHeight="60" id="eYe-gh-buw" customClass="TaskTableViewCell" customModule="Tasky" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskTableViewCell" rowHeight="68" id="eYe-gh-buw" customClass="TaskTableViewCell" customModule="Tasky" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYe-gh-buw" id="T0Q-Vy-7UC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ag-LC-6fr">
-                                                    <rect key="frame" x="8" y="8" width="94" height="19"/>
+                                                    <rect key="frame" x="16" y="8" width="94" height="19"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03/04/2012 12:20 PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-eV-CmS">
-                                                    <rect key="frame" x="260" y="11" width="107" height="13"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <rect key="frame" x="250" y="11" width="109" height="13"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-HO-4xx">
-                                                    <rect key="frame" x="8" y="37" width="359" height="17"/>
+                                                    <rect key="frame" x="16" y="37" width="343" height="14.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3Se-HO-4xx" firstAttribute="top" secondItem="4ag-LC-6fr" secondAttribute="bottom" constant="10" id="3lC-RW-WZG"/>
-                                                <constraint firstItem="3Se-HO-4xx" firstAttribute="leading" secondItem="T0Q-Vy-7UC" secondAttribute="leadingMargin" id="7r6-fZ-s0R"/>
-                                                <constraint firstItem="Aga-eV-CmS" firstAttribute="trailing" secondItem="T0Q-Vy-7UC" secondAttribute="trailingMargin" id="Dct-RG-MST"/>
-                                                <constraint firstItem="Aga-eV-CmS" firstAttribute="top" secondItem="T0Q-Vy-7UC" secondAttribute="topMargin" constant="3" id="KaC-Jm-Ap4"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3Se-HO-4xx" secondAttribute="bottom" constant="-2.5" id="SwP-Ii-mJy"/>
-                                                <constraint firstItem="4ag-LC-6fr" firstAttribute="top" secondItem="T0Q-Vy-7UC" secondAttribute="topMargin" id="Z0b-Rr-h43"/>
-                                                <constraint firstItem="4ag-LC-6fr" firstAttribute="leading" secondItem="T0Q-Vy-7UC" secondAttribute="leadingMargin" id="gyr-zb-luM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3Se-HO-4xx" secondAttribute="trailing" id="oB2-qh-br0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3Se-HO-4xx" secondAttribute="bottom" constant="8" id="4mQ-eS-I4y"/>
+                                                <constraint firstItem="4ag-LC-6fr" firstAttribute="top" secondItem="T0Q-Vy-7UC" secondAttribute="topMargin" id="EoC-m7-Efl"/>
+                                                <constraint firstItem="4ag-LC-6fr" firstAttribute="leading" secondItem="T0Q-Vy-7UC" secondAttribute="leadingMargin" constant="8" id="JDY-uC-jyo"/>
+                                                <constraint firstItem="3Se-HO-4xx" firstAttribute="leading" secondItem="T0Q-Vy-7UC" secondAttribute="leadingMargin" constant="8" id="JYk-Ai-lmu"/>
+                                                <constraint firstItem="3Se-HO-4xx" firstAttribute="top" secondItem="T0Q-Vy-7UC" secondAttribute="topMargin" constant="29" id="QZn-Is-jHW"/>
+                                                <constraint firstItem="Aga-eV-CmS" firstAttribute="top" secondItem="T0Q-Vy-7UC" secondAttribute="topMargin" constant="3" id="kKP-fY-qic"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Aga-eV-CmS" secondAttribute="trailing" constant="8" id="rTV-7k-sgg"/>
+                                                <constraint firstItem="3Se-HO-4xx" firstAttribute="trailing" secondItem="T0Q-Vy-7UC" secondAttribute="trailingMargin" constant="-8" id="yUD-JI-FPD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

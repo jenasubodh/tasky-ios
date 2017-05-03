@@ -13,6 +13,13 @@
 		C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */; };
 		C212ADB81E90D95300DDC0E7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212ADB61E90D95300DDC0E7 /* Task.swift */; };
 		C212ADB91E90D95300DDC0E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C212ADB71E90D95300DDC0E7 /* User.swift */; };
+		C21A26BE1EB9C125001B1F7B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21A26BD1EB9C125001B1F7B /* Settings.storyboard */; };
+		C21A26C01EB9C164001B1F7B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26BF1EB9C164001B1F7B /* SettingsViewController.swift */; };
+		C21A26C41EB9C221001B1F7B /* SettingsPresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26C31EB9C221001B1F7B /* SettingsPresentationProtocol.swift */; };
+		C21A26C61EB9C255001B1F7B /* SettingsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26C51EB9C255001B1F7B /* SettingsViewProtocol.swift */; };
+		C21A26C81EB9C2AD001B1F7B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26C71EB9C2AD001B1F7B /* SettingsPresenter.swift */; };
+		C21A26CB1EB9C2FC001B1F7B /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26CA1EB9C2FC001B1F7B /* SettingsRouter.swift */; };
+		C21A26CD1EB9C338001B1F7B /* SettingsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A26CC1EB9C338001B1F7B /* SettingsWireFrame.swift */; };
 		C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B40CC1E7BABC1009DE62B /* AppDelegate.swift */; };
 		C22B40D21E7BABC1009DE62B /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22B40D01E7BABC1009DE62B /* Tasks.storyboard */; };
 		C22B40D41E7BABC1009DE62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22B40D31E7BABC1009DE62B /* Assets.xcassets */; };
@@ -87,6 +94,13 @@
 		C2051CC31E7FE46A00B2E706 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		C212ADB61E90D95300DDC0E7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C212ADB71E90D95300DDC0E7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C21A26BD1EB9C125001B1F7B /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C21A26BF1EB9C164001B1F7B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C21A26C31EB9C221001B1F7B /* SettingsPresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPresentationProtocol.swift; sourceTree = "<group>"; };
+		C21A26C51EB9C255001B1F7B /* SettingsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewProtocol.swift; sourceTree = "<group>"; };
+		C21A26C71EB9C2AD001B1F7B /* SettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		C21A26CA1EB9C2FC001B1F7B /* SettingsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		C21A26CC1EB9C338001B1F7B /* SettingsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsWireFrame.swift; sourceTree = "<group>"; };
 		C22B40C91E7BABC1009DE62B /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22B40CC1E7BABC1009DE62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C22B40D11E7BABC1009DE62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tasks.storyboard; sourceTree = "<group>"; };
@@ -192,10 +206,11 @@
 			isa = PBXGroup;
 			children = (
 				C2602D2B1EB85A1A00CB4055 /* Root */,
-				C212ADBD1E90E07A00DDC0E7 /* Register */,
-				C212ADBC1E90E07400DDC0E7 /* Login */,
 				C28F29C61E88493A00F0CF68 /* Tasks */,
 				C28F29C51E88493400F0CF68 /* Task */,
+				C21A26BB1EB9C10E001B1F7B /* Settings */,
+				C212ADBD1E90E07A00DDC0E7 /* Register */,
+				C212ADBC1E90E07400DDC0E7 /* Login */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -257,6 +272,52 @@
 				C240FE761E95538F00B8CC17 /* APIManager.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		C21A26BB1EB9C10E001B1F7B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C21A26C91EB9C2EF001B1F7B /* Router */,
+				C21A26C21EB9C210001B1F7B /* Protocols */,
+				C21A26C11EB9C209001B1F7B /* Presenter */,
+				C21A26BC1EB9C117001B1F7B /* View */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		C21A26BC1EB9C117001B1F7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C21A26BD1EB9C125001B1F7B /* Settings.storyboard */,
+				C21A26BF1EB9C164001B1F7B /* SettingsViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C21A26C11EB9C209001B1F7B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C21A26C71EB9C2AD001B1F7B /* SettingsPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C21A26C21EB9C210001B1F7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C21A26C31EB9C221001B1F7B /* SettingsPresentationProtocol.swift */,
+				C21A26C51EB9C255001B1F7B /* SettingsViewProtocol.swift */,
+				C21A26CC1EB9C338001B1F7B /* SettingsWireFrame.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C21A26C91EB9C2EF001B1F7B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C21A26CA1EB9C2FC001B1F7B /* SettingsRouter.swift */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 		C22B40C01E7BABC1009DE62B = {
@@ -594,6 +655,7 @@
 				C22B40D71E7BABC1009DE62B /* LaunchScreen.storyboard in Resources */,
 				C22B40D41E7BABC1009DE62B /* Assets.xcassets in Resources */,
 				C22B40D21E7BABC1009DE62B /* Tasks.storyboard in Resources */,
+				C21A26BE1EB9C125001B1F7B /* Settings.storyboard in Resources */,
 				C2602D2A1EB8599200CB4055 /* Task.storyboard in Resources */,
 				C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */,
 			);
@@ -776,6 +838,8 @@
 				C2AE51991EB89E63007824BA /* TaskPresentationProtocol.swift in Sources */,
 				C2F19E771E9127AF0057E087 /* RegisrationViewController.swift in Sources */,
 				C2E706F51EB5B2B000A667CC /* TasksWireFrame.swift in Sources */,
+				C21A26CD1EB9C338001B1F7B /* SettingsWireFrame.swift in Sources */,
+				C21A26C61EB9C255001B1F7B /* SettingsViewProtocol.swift in Sources */,
 				C2AE519E1EB89F0E007824BA /* TaskPresenter.swift in Sources */,
 				C20013C31E98C94800C2CB3A /* SessionManager.swift in Sources */,
 				C2F19E751E91279D0057E087 /* LoginViewController.swift in Sources */,
@@ -794,10 +858,12 @@
 				C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,
+				C21A26C01EB9C164001B1F7B /* SettingsViewController.swift in Sources */,
 				C2602D301EB85A5900CB4055 /* RootRouter.swift in Sources */,
 				C2E706E91EB5A9F900A667CC /* TasksViewProtocol.swift in Sources */,
 				C2E706EF1EB5AEF700A667CC /* TasksPresenter.swift in Sources */,
 				C2602D2E1EB85A3800CB4055 /* RootProtocol.swift in Sources */,
+				C21A26C41EB9C221001B1F7B /* SettingsPresentationProtocol.swift in Sources */,
 				C2E706F31EB5B19C00A667CC /* TasksInteractor.swift in Sources */,
 				C2E706FA1EB5B62C00A667CC /* TasksRouter.swift in Sources */,
 				C2051CC41E7FE46A00B2E706 /* TasksViewController.swift in Sources */,
@@ -808,7 +874,9 @@
 				C2E706EB1EB5AE2300A667CC /* TasksPresentationProtocol.swift in Sources */,
 				C25111981E851450004DD696 /* TaskViewController.swift in Sources */,
 				C2E706F11EB5B10C00A667CC /* TasksInteractorInput.swift in Sources */,
+				C21A26CB1EB9C2FC001B1F7B /* SettingsRouter.swift in Sources */,
 				C23DC0FA1E93FFA200C94F22 /* Endpoints.swift in Sources */,
+				C21A26C81EB9C2AD001B1F7B /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

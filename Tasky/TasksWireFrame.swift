@@ -15,6 +15,7 @@ protocol TasksWireframe: class {
     
     func presentSortOptions(sortCompletion: ((TasksSortType) -> ())?)
     func presentDetails(forTask task: Task)
+    func presentSettings()
     
     static func assembleModule() -> UIViewController
 }

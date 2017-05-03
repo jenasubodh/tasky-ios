@@ -54,4 +54,9 @@ class TasksRouter : NSObject, TasksWireframe {
         let taskEditorViewController = TaskRouter.assembleModule(task)
         viewController?.navigationController?.pushViewController(taskEditorViewController, animated: true)
     }
+    
+    func presentSettings() {
+        let settingsViewController = SettingsRouter.assembleModule()
+        viewController?.navigationController?.pushViewController(settingsViewController, animated: true)
+    }
 }

@@ -80,7 +80,7 @@ class TasksViewController: UIViewController {
     }
     
     @IBAction func didTapEdit(_ sender: Any) {
-        
+        self.presenter.router.presentSettings()
     }
 }
 

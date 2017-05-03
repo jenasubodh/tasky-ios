@@ -17,4 +17,5 @@ protocol TasksPresentationProtocol: class {
     func viewDidLoad()
     func didClickSortButton()
     func didSelectTask(_ task: Task)
+    func didSelectSettings()
 }

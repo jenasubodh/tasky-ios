@@ -11,7 +11,7 @@ import Eureka
 
 class TaskViewController: FormViewController {
     
-    // Form Tags
+    // MARK: -  Form Tags
     
     let taskTitle = "taskTitle"
     let taskDateTime = "taskDateTime"
@@ -41,10 +41,10 @@ class TaskViewController: FormViewController {
                 row.tag = taskTitle
                 row.placeholder = "Task Title"
             }
-            <<< DateTimeRow() {
+            <<< DateTimeInlineRow() {
                 $0.title = "When"
                 $0.tag = taskDateTime
-                $0.value = Date(timeIntervalSinceReferenceDate: 0)
+                $0.value = Date()
             }
             
         form +++ Section("Details")
