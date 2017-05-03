@@ -41,8 +41,8 @@
 		C296C6B11E885286008C84EE /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296C6B01E885286008C84EE /* Authentication.storyboard */; };
 		C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63201E9BE7B300E513AC /* Utilities.swift */; };
 		C29A63231E9BE7CC00E513AC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A63221E9BE7CC00E513AC /* Keys.swift */; };
-		C2AE51911EB89711007824BA /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51901EB89711007824BA /* ViewProtocols.swift */; };
-		C2AE51941EB89759007824BA /* IndicatableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */; };
+		C2AE51911EB89711007824BA /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51901EB89711007824BA /* ViewExtensions.swift */; };
+		C2AE51941EB89759007824BA /* IndicatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51931EB89759007824BA /* IndicatableView.swift */; };
 		C2AE51971EB89E0D007824BA /* TaskViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51961EB89E0D007824BA /* TaskViewProtocol.swift */; };
 		C2AE51991EB89E63007824BA /* TaskPresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE51981EB89E63007824BA /* TaskPresentationProtocol.swift */; };
 		C2AE519B1EB89EB4007824BA /* TaskWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE519A1EB89EB4007824BA /* TaskWireFrame.swift */; };
@@ -128,8 +128,8 @@
 		C296C6B01E885286008C84EE /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		C29A63201E9BE7B300E513AC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C29A63221E9BE7CC00E513AC /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		C2AE51901EB89711007824BA /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
-		C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatableViewExtension.swift; sourceTree = "<group>"; };
+		C2AE51901EB89711007824BA /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		C2AE51931EB89759007824BA /* IndicatableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatableView.swift; sourceTree = "<group>"; };
 		C2AE51961EB89E0D007824BA /* TaskViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewProtocol.swift; sourceTree = "<group>"; };
 		C2AE51981EB89E63007824BA /* TaskPresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPresentationProtocol.swift; sourceTree = "<group>"; };
 		C2AE519A1EB89EB4007824BA /* TaskWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskWireFrame.swift; sourceTree = "<group>"; };
@@ -476,7 +476,7 @@
 		C2AE518F1EB89625007824BA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE51901EB89711007824BA /* ViewProtocols.swift */,
+				C2AE51901EB89711007824BA /* ViewExtensions.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 		C2AE51921EB8972D007824BA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE51931EB89759007824BA /* IndicatableViewExtension.swift */,
+				C2AE51931EB89759007824BA /* IndicatableView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -849,12 +849,12 @@
 				C2AE51971EB89E0D007824BA /* TaskViewProtocol.swift in Sources */,
 				C2AE519B1EB89EB4007824BA /* TaskWireFrame.swift in Sources */,
 				C2E706F81EB5B33600A667CC /* TasksSortType.swift in Sources */,
-				C2AE51941EB89759007824BA /* IndicatableViewExtension.swift in Sources */,
+				C2AE51941EB89759007824BA /* IndicatableView.swift in Sources */,
 				C29A63211E9BE7B300E513AC /* Utilities.swift in Sources */,
 				C2C620981E9A904A00A917A9 /* SessionManagerProtocol.swift in Sources */,
 				C23E20B31E97962B00575894 /* APIResult.swift in Sources */,
 				C2602D351EB85F5B00CB4055 /* TaskTableViewCell.swift in Sources */,
-				C2AE51911EB89711007824BA /* ViewProtocols.swift in Sources */,
+				C2AE51911EB89711007824BA /* ViewExtensions.swift in Sources */,
 				C23DC0F81E93FF8000C94F22 /* EndpointProtocol.swift in Sources */,
 				C22B40CD1E7BABC1009DE62B /* AppDelegate.swift in Sources */,
 				C23E20B71E9799BF00575894 /* Globals.swift in Sources */,
